@@ -28,12 +28,6 @@ body {
     border: 2px solid black;
 }
 
-.grid-item {
-    width: calc(100% / 16); 
-    height: calc(100% / 16);
-    /* border: 1px solid black; */
-}
-
 .grid-item:hover {
     background-color: green;
     border-color: green;
