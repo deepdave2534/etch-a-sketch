@@ -9,6 +9,13 @@ function clearGrid() {
     makeGrid(number);
 }
 
+function randomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function makeGrid(n) {
     container.innerHTML = '';
 
@@ -16,12 +23,11 @@ function makeGrid(n) {
         const div = document.createElement('div');
         div.classList.add('grid-item');
 
-        // Set size dynamically based on n
         div.style.width = `calc(100% / ${n})`;
         div.style.height = `calc(100% / ${n})`;
 
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = 'green';
+            div.style.backgroundColor = randomColor();
         });
 
         container.appendChild(div);
