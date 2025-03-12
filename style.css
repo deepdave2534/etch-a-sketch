@@ -23,5 +23,10 @@ body {
 .grid-item {
     width: calc(100% / 16); 
     height: calc(100% / 16);
-    border: 1px solid blue;
+    border: 1px solid black;
+}
+
+.grid-item:hover {
+    background-color: green; /* Change background color */
+    border-color: green; /* Optional: Change border color */
 }
