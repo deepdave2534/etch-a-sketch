@@ -1,12 +1,5 @@
 const container = document.querySelector('.container');
-
-function clearGrid() {
-    const reset = document.getElementById("reset");
-
-    reset.addEventListener("click", function() {
-        container.innerHTML = '';
-    });
-}
+const resetButton = document.querySelector('.reset');
 
 function makeGrid(n) {
     container.innerHTML = '';
@@ -25,8 +18,6 @@ function makeGrid(n) {
 
         container.appendChild(div);
     }
-
-    clearGrid();
 }
 
 let userInput = prompt("Enter a number:");
