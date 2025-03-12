@@ -32,3 +32,10 @@ body {
     background-color: green;
     border-color: green;
 }
+
+.reset {
+    margin: 20px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 8px;
+}
