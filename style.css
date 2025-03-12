@@ -6,10 +6,18 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
+}
+
+.heading {
+    color:red;
+    font-size: 50px;
+    padding: 80px;
+    margin: 10px;
 }
 
 .container {
@@ -27,6 +35,6 @@ body {
 }
 
 .grid-item:hover {
-    background-color: green; /* Change background color */
-    border-color: green; /* Optional: Change border color */
+    background-color: green;
+    border-color: green;
 }
