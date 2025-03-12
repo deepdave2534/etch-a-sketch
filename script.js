@@ -1,12 +1,25 @@
 const container = document.querySelector('.container');
 
-for (let i = 0; i < 16 * 16; i++) {
-    const div = document.createElement('div');
-    div.classList.add('grid-item');
+function makeGrid(n) {
+    container.innerHTML = '';
 
-    div.addEventListener('mouseover', () => {
-        div.style.backgroundColor = 'green';
-    });
+    for (let i = 0; i < n * n; i++) {
+        const div = document.createElement('div');
+        div.classList.add('grid-item');
 
-    container.appendChild(div);
+        // Set size dynamically based on n
+        div.style.width = `calc(100% / ${n})`;
+        div.style.height = `calc(100% / ${n})`;
+
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = 'green';
+        });
+
+        container.appendChild(div);
+    }
 }
+
+let userInput = prompt("Enter a number:");
+let number = parseInt(userInput);
+
+makeGrid(number);
